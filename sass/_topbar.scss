@@ -1,0 +1,7 @@
+@mixin ns-topbar() {
+}
+
+.ns-topbar {
+  @include ns-topbar;
+}
+

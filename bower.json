@@ -1,0 +1,31 @@
+{
+  "name": "nsTopBar",
+  "version": "0.0.1",
+  "homepage": "https://github.com/nohros/nsTopBar",
+  "description": "The topbar that is used in the nohros site and other applications developed by nohros.",
+  "authors": [
+    "Neylor Ohmaly <nohros.ceo@gmail.com>"
+  ],
+  main: [
+    "src/nsTopBar.js",
+    "sass/ns-topbar.scss"
+  ],
+  "keywords": [
+    "angularjs",
+    "nsTopBar",
+    "nohros"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests",
+    ".idea"
+  ],
+  "dependencies": {
+    "angular": "~1.2.9"
+  }
+}
