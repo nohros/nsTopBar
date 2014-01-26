@@ -39,9 +39,11 @@ angular
       href: "#/themes"
     }];
   });
+```
 
 ```html
 <ns-topbar></ns-topbar>
+```
 
 ### nsTopBar Menu
 
@@ -69,6 +71,7 @@ $nav-link-active-color : #ff3c1f !default;
 $nav-link-opacity: 0.6 !default;
 // Control the line-height of the menu items.
 $nav-link-line-height: 3em !default;
+```
 
 ### Themes
 
@@ -89,10 +92,12 @@ You can customize the ``nsTopBar`` through themes. YOu can use the ``ns-topbar``
     }
   }
 }
+```
 
 ```html
 <ns-topbar ns-topbar-theme="custom-topbar-theme">
 </ns-topbar>
+```
 
 ## License
 
