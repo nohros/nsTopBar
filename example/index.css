@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  font-family: arial, sans-serif;
+}
+
+body {
+  background: #f8f9fa;
+  padding: 0;
+  margin: 0;
+}
+
+.ns-topbar .logo {
+  display: block;
+  float: left;
+  margin-right: 1em;
+  line-height: 3em;
+}
+
+.ns-topbar li a {
+  text-transform: uppercase;
+}
+
+.profile {
+  float: right;
+}
+
+.profile .account {
+
+}

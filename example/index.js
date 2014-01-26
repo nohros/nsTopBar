@@ -3,5 +3,14 @@ angular
     'nsTopBar'
   ])
 
-  .controller('MainCtrl', function MainCtrl($scope, nsTopBar) {
+  .controller('MainCtrl', function MainCtrl($scope) {
+    $scope.menu = [{
+      text: "home",
+      href: "#/home"
+    }, {
+      text: "Themes",
+      href: "#/themes"
+    }];
+
+    $scope.name = "Ohmaly";
   });

@@ -1,2 +1,13 @@
 .ns-topbar-default-theme {
+  &.ns-topbar {
+    @include ns-topbar;
+
+    .ns-topbar-nav {
+      @include ns-topbar-nav;
+    }
+
+    ul {
+      @include ns-topbar-list;
+    }
+  }
 }
