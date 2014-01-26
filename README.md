@@ -75,11 +75,11 @@ $nav-link-line-height: 3em !default;
 
 ### Themes
 
-You can customize the ``nsTopBar`` through themes. YOu can use the ``ns-topbar``, ``ns-topbar-nav`` and
+You can customize the ``nsTopBar`` through themes. You can use the ``ns-topbar``, ``ns-topbar-nav`` and
 ``ns-topbar-list`` to create your own theme with semantic markup, like so.
 
 ```scss
-.custom-topbar-class {
+.custom-topbar-theme {
   &.ns-topbar {
     @include ns-topbar;
 
