@@ -6,9 +6,11 @@
   "authors": [
     "Neylor Ohmaly <nohros.ceo@gmail.com>"
   ],
-  main: [
+  "main": [
     "src/nsTopBar.js",
-    "sass/ns-topbar.scss"
+    "sass/ns-topbar.scss",
+    "sass/_topbar.scss",
+    "sass/_theme.scss"
   ],
   "keywords": [
     "angularjs",
