@@ -7,6 +7,7 @@ body {
   background: #f8f9fa;
   padding: 0;
   margin: 0;
+  color: #4E5860;
 }
 
 .ns-topbar .logo {
@@ -16,7 +17,7 @@ body {
   line-height: 3em;
 }
 
-.ns-topbar li a {
+.ns-topbar a {
   text-transform: uppercase;
 }
 
@@ -25,5 +26,31 @@ body {
 }
 
 .profile .account {
+}
 
+.ns-topbar li {
+  border-left: solid 1px #d2d2d2;
+  margin:0;
+  color: #d2d2d2;
+}
+
+.ns-topbar a:hover {
+  color: #4E5860;
+}
+
+.ns-topbar-default-theme li,
+.ns-top-bar li:last-child {
+  border-right: solid 1px #d2d2d2;
+}
+
+li.search a,
+li.account a {
+  font-size: 1em;
+  padding: 0 1em;
+  width: 3em;
+}
+
+.search input[type="text"],
+.search input[type="search"] {
+  border: solid 1px #d2d2d2;
 }

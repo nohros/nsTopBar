@@ -1,13 +1,43 @@
+$nav-link-color : #879096 !default;
+$nav-link-active-color : #ff3c1f !default;
+$nav-link-opacity: 0.6 !default;
+
 .ns-topbar-default-theme {
   &.ns-topbar {
     @include ns-topbar;
+  }
 
-    .ns-topbar-nav {
-      @include ns-topbar-nav;
+  .ns-topbar-nav {
+    @include ns-topbar-nav;
+  }
+
+  ul, .ns-topbar-list {
+    @include ns-topbar-list;
+  }
+
+  li, .ns-topbar-list-item {
+    @include ns-topbar-list-item;
+
+    > a {
+      @include ns-topbar-link;
     }
+  }
 
-    ul {
-      @include ns-topbar-list;
+  .ns-topbar-menu {
+    @include ns-topbar-list;
+
+    li, .ns-topbar-list-item {
+      > a {
+        color: $nav-link-color;
+        opacity: $nav-link-opacity;
+
+        &:hover,
+        &.ns-active {
+          color: $nav-link-active-color;
+          border-bottom: solid $ns-topbar-border-size $nav-link-active-color;
+          opacity: 1;
+        }
+      }
     }
   }
 }

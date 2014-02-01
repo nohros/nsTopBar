@@ -2,9 +2,6 @@ $ns-topbar-padding:0 0.75em;
 $ns-topbar-border-size: 0.125em;
 $ns-topbar-border-color: #d9e0e2;
 
-$nav-link-color : #879096 !default;
-$nav-link-active-color : #ff3c1f !default;
-$nav-link-opacity: 0.6 !default;
 $nav-link-line-height: 3em !default;
 
 @mixin ns-topbar-nav {
@@ -32,6 +29,12 @@ $nav-link-line-height: 3em !default;
   height: $nav-link-line-height +  $ns-topbar-border-size;
 }
 
+@mixin ns-topbar-list-item() {
+  float: left;
+  margin-right: 1em;
+  padding-top: 0;
+}
+
 @mixin ns-topbar-list() {
   list-style: none;
   margin: 0;
@@ -39,32 +42,17 @@ $nav-link-line-height: 3em !default;
   display: block;
   position: relative;
 
-  li {
-    float: left;
-    margin-right: 1em;
-    padding-top: 0;
-
-    a {
-      background: transparent;
-      line-height: $nav-link-line-height;
-      padding: 0;
-      color: $nav-link-color;
-      opacity: $nav-link-opacity;
-      text-decoration: none;
-      display: block;
-      font-weight: 400;
-
-      &:hover,
-      &.ns-active {
-        color: $nav-link-active-color;
-        border-bottom: solid $ns-topbar-border-size $nav-link-active-color;
-        opacity: 1;
-      }
-    }
-  }
-
   &:after {
     clear: both;
   }
+}
+
+@mixin ns-topbar-link {
+  background: transparent;
+  line-height: $nav-link-line-height;
+  padding: 0;
+  text-decoration: none;
+  display: block;
+  font-weight: 400;
 }
 

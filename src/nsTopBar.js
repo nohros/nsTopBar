@@ -56,25 +56,32 @@
 
     .directive('nsTopbar',
       function() {
+        var template =
+          '<div class="ns-topbar ns-topbar-default-theme">' +
+          '<nav class="ns-topbar-nav">' +
+          '<a class="logo"></a>' +
+          '<ul class="ns-topbar-menu" ns-topbar-menu>' +
+          '<li ng-repeat="item in menu">' +
+          '<a href="{{item.href}}">{{item.text}}</a>' +
+          '</li>' +
+          '</ul>' +
+          '<div ng-transclude class="ns-transcluded"></div>' +
+          '</nav>' +
+          '</div>';
         return {
           restrict: 'E',
+          replace: true,
           transclude: true,
-          compile: function(elm, attrs) {
-            var theme = attrs.nsTopBarTheme || "ns-topbar-default-theme";
-            var template = '<div class="ns-topbar ' + theme + '">' +
-              '<nav class="ns-topbar-nav">' +
-              '<a class="logo">nsTopBar</a>' +
-              '<ul ns-topbar-menu>' +
-              '<li ng-repeat="item in menu">' +
-              '<a href="{{item.href}}">{{item.text}}</a>' +
-              '</li>' +
-              '</ul>' +
-              '<div ng-transclude class="ns-transcluded"></div>' +
-              '</nav>' +
-              '</div>';
-            elm.replaceWith(template);
-          },
+          template: template,
           link: function(scope, elm, attrs) {
+            attrs.$observe('nsTopBarTheme', function(newTheme, oldTheme) {
+              if (isDef(newTheme)) {
+                elm
+                  .removeClasss('ns-topbar-default-theme')
+                  .removeClass(oldTheme)
+                  .addClass(newTheme);
+              }
+            });
           }
         };
     });
